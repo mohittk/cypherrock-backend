@@ -12,6 +12,10 @@ const cors = require("cors");
 app.use(bodyParser.json());
 app.use(cors());
 
+app.get('/', function(req, res){
+  res.send("Hello bro!")
+})
+
 app.post("/getBalance", async (req, res) => {
   try {
     const { mnemonic } = req.body;
